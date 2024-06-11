@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia dos Namorados, Meu Amor!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #main-content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+        iframe {
+            max-width: 100%;
+            height: 315px;
+            margin: 20px 0;
+        }
+        .photos-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .photo {
+            width: 200px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-content">
+        <h1>Feliz Dia dos Namorados, Meu Amor!</h1>
+        <p>Você me traz felicidade e contigo tenho momentos inesquecíveis, obrigada por cada risada e por me escolher. Sou feliz ao seu lado!!!</p>
+        <p>Um pequeno vídeo para você:</p>
+        <video controls width="560" height="315">
+            <source src="IMG_1444.MOV" type="video/mp4">
+        </video>
+        <p>Quando vejo nossas fotos uma felicidade imensa surge em mim, é como se passasse um filme de todos os momentos bons. Eu sou tão grata a Deus por isso, pela chance de viver ao seu lado, por ter você como companheiro. Espero que esse seja o 2º ano de dia dos namorados de muitos que virão, espero que possamos estar a cada ano mais felizes e realizados do que o ano anterior, espero estar do seu lado, independente de ser um momento bom ou não. Nesse 1 ano e 6 meses que passaram, crescemos muito juntos, que isso perdure por muito tempo. Seus sonhos também são os meus e sua felicidade também é a minha, nunca se esqueça disso! Eu te amo meu amor!!!</p>
+        <p>Com todo o meu amor,</p>
+        <p>Yasmim.</p>
+        <!-- Elemento invisível para iniciar a reprodução automática -->
+    <div id="playButton" style="display: none;"></div>
+        <audio controls autoplay>
+            <source src="Jorge & Mateus - Os Anjos Cantam (LyricVideo) [Álbum Os Anjos Cantam] (320).mp3" type="audio/mp3">
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+         <!-- Script para iniciar a reprodução automática -->
+    <script>
+        // Obtém o elemento do áudio
+        var audio = document.getElementById('audioPlayer');
+        
+        // Função para iniciar a reprodução
+        function playAudio() {
+            audio.play();
+        }
+        
+        // Chama a função para iniciar a reprodução quando a página carregar
+        window.onload = playAudio;
+    </div>
+</body>
+</html>
+# Criação do código QR
+qr = qrcode.QRCode(
+    version=1,
+    error_correction=qrcode.constants.ERROR_CORRECT_L,
+    box_size=10,
+    border=4,
+)
+qr.add_data(html_content)
+qr.make(fit=True)
+
+# Criação da imagem do código QR
+img = qr.make_image(fill_color="black", back_color="white")
+
+# Salvar a imagem do código QR
+img.save("codigo_qr_html.png")
